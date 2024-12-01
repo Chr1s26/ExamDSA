@@ -1,0 +1,252 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module Exam {
+}
+
+// Constructor super 
+
+//private String ownerName;
+//private String model;
+//private String licenseNo;
+//private double pricePerDay;
+//private static int vehicleCount = 0;
+//private static final int maxVehicleCount = 100;
+//
+//public Vehicle(String ownerName,String model,String licenseNo,double pricePerDay) {
+//	this.ownerName = ownerName;
+//	this.model = model;
+//	this.licenseNo = licenseNo;
+//	this.pricePerDay = pricePerDay;
+//}
+//
+//public Vehicle (Vehicle vehicleModel) {
+//	this.ownerName = vehicleModel.ownerName;
+//	this.model = vehicleModel.model;
+//	this.licenseNo = vehicleModel.licenseNo;
+//	this.pricePerDay = vehicleModel.pricePerDay;
+//	this.vehicleCount ++;
+//}
+//
+//private int numSeats;
+//private String carType;
+//private static final int maxCarCount = 100;
+//private static int CarCount = 0;
+//
+//public Car(Vehicle vehicle, int numSeats,String carType) {
+//	super(vehicle);
+//	this.numSeats = numSeats;
+//	this.carType = carType;
+//	this.CarCount++;
+//}
+//public interface CarDao {
+//
+//	void addCarModel(Car car);
+//	Car getCarModelByLicenseNumber(String name);
+//	void deleteCarModelByLicenseNumber(String license);
+//
+//}
+
+//private static Car[] cars = new Car[Car.getMaxcarcount()];
+//
+//@Override
+//public void addCarModel(Car car) {
+//	cars[Car.getCarCount()-1] = car;
+//}
+//
+//
+//@Override
+//public Car getCarModelByLicenseNumber(String name) {
+//		for(int i = 0; i < Car.getCarCount();i++) {
+//			if(cars[i].getLicenseNo().equalsIgnoreCase(name)) {
+//				return cars[i];}}
+//		return null;
+//}
+//
+//
+//@Override
+//public void deleteCarModelByLicenseNumber(String license) {
+//	
+//	 for (int i = 0; i < Car.getCarCount(); i++) {
+//            if (cars[i] != null && cars[i].getLicenseNo().equalsIgnoreCase(license)) {
+//            	
+//                for (int j = i; j < Car.getCarCount() - 1; j++) {
+//                    cars[j] = cars[j + 1];}
+//                
+//                cars[Car.getCarCount() - 1] = null; 
+//                Car.setCarCount(Car.getCarCount() - 1);
+//                Rental.setCarRentalCount(Rental.getCarRentalCount()+1);
+//                break;}}
+//}
+//
+//
+//
+//public static Car[] getCars() {
+//	return cars;
+//}
+
+//public class Rental {
+//
+//	private static int rentalId = 0;
+//	private String vehicleType;
+//	private Vehicle vehicle;
+//	private int rentedDays;
+//	private double totalPrice;
+//	private final static int maxRentalCount = 100;
+//	private static int rentalCount = 0;
+//	private static int carRentalCount = 0;
+//	private static int motorCycleRentalCount = 0;
+//	private Customer customer;
+//	
+//
+//	public Rental(String vehicleType,int rentedDays,double totalPrice,Customer customer) {
+//		this.vehicleType = vehicleType;
+//		this.rentedDays = rentedDays;
+//		this.totalPrice = totalPrice;
+//		this.customer = customer;      //*
+//		rentalCount++;
+//		this.rentalId = rentalCount;
+//	}
+
+
+//static BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+//static CarRegisterationService carRegisterationService = new CarRegisterationService();
+//static MotorCycleRegisterationService motorCycleRegisterationService = new MotorCycleRegisterationService();
+//static CarRentalService carRentalService = new CarRentalService();
+//static MotorCycleRentalService motorCycleRentalService = new MotorCycleRentalService();
+//
+//
+//public static void main(String[] args) throws NumberFormatException, IOException {
+//	
+//	
+//	System.out.println("----Welcome From Car and Motorcycle Rental System----");
+//	int number = 0;
+//	do {
+//		System.out.println("\n1.To add a Vehicle to the system");
+//		System.out.println("2.To rent Vehicle");
+//		System.out.println("3.To show Sale Report");
+//		System.out.println("4.Display Vehicle");
+//		System.out.println("5.Exit");
+//		number = Integer.parseInt(bufferedReader.readLine());
+//		
+//		switch (number) {
+//		case 1:  addVehicle(); break;
+//		
+//		case 2: rentVehicle(); break;
+//		
+//		case 3: displaySaleReportOfVehicle(); break;
+//		 
+//		case 4: displayVehicle(); break;
+//			
+//		default:break;}
+//	}while(number != 5);
+//	
+//	System.out.println("Thank you for using the Car and Motorcycle Management System.GoodBye!");
+//}
+//
+//
+//
+//public static void addVehicle() throws IOException {
+//	if(getType().equalsIgnoreCase("car")) {
+//		carRegisterationService.addVehicle();
+//		System.out.println("Car added successfully!!");}
+//	else {
+//		motorCycleRegisterationService.addVehicle();
+//		System.out.println("MotorCycle added successfully!!");}
+//	}
+//
+//public static void displayVehicle() throws IOException{
+//		carRegisterationService.DisplayVehicle();
+//		motorCycleRegisterationService.DisplayVehicle();
+//}
+//
+//public static void rentVehicle() throws IOException{
+//	if(getType().equalsIgnoreCase("car")) {
+//		carRentalService.RentVehicle();
+//	}
+//	else {
+//		motorCycleRentalService.RentVehicle();
+//	}
+//}
+//
+//public static void displaySaleReportOfVehicle() throws IOException {
+//		carRentalService.displaySaleReport();
+//		motorCycleRentalService.displaySaleReport();
+//	}
+//
+//	
+//public static String getType() throws IOException {
+//	System.out.println("Enter the vehicle Type : ");
+//	String type = bufferedReader.readLine();
+//	return type;
+//}
+------------------------------------------------------------------------------------------------------------------------------------
+
+//Exam System
+//
+//package ExamManagementSystem;
+//
+//public class Question {
+//	
+//	private String question;
+//	private String answer;
+//	private String[] multipleChoices = new String[4];
+//	
+//	public Question() {
+//		
+//	}
+//	
+//	public Question(String question,String answer,String[] multipleChoice) {
+//		this.question = question;
+//		this.answer = answer;
+//		this.multipleChoices = multipleChoice;
+//	}
+//	
+//	public String getQuestion() {
+//		return question;
+//	}
+//	
+//	public void setQuestion(String question) {
+//		this.question = question;
+//	}
+//	
+//	public String[] getMultipleChoices() {
+//		return multipleChoices;
+//	}
+//	
+//	public void setMultipleChoice(String[] multipleChoices) {
+//		this.multipleChoices = multipleChoices;
+//	}
+//	
+//	public String getanswer() {
+//		return answer;
+//	}
+//	
+//	public void setanswer(String answer) {
+//		this.answer = answer;
+//	}
+//}
+//
+//
+//public class Exam {
+//    private Question[] questions;
+//    
+//    public Exam() {
+//        
+//    }
+//    
+//    public Exam(Question[] questions) {
+//        this.questions = questions;
+//    }
+//    
+//    public Question[] getQuestions() {
+//        return questions;
+//    }
+//    
+//    public void setQuestions(Question[] questions) {
+//        this.questions = questions;
+//    }
+//}

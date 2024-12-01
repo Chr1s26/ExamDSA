@@ -1,0 +1,37 @@
+package Problem;
+
+import java.util.List;
+
+public class MakeUpArtist {
+	
+	abstract class MakeupArtist {
+		private String name;
+		private int yearsExperience;
+		private double hourlyRate;
+		private List<> ratings;
+		
+		public MakeupArtist(String name, int yearsExperience, double hourlyRate) {
+			this.name = name;
+			this.yearsExperience = yearsExperience;
+			this.hourlyRate = hourlyRate;
+//			this.ratings = new ArrayList<>();
+		}
+		
+		//// Abstract method to calculate cost - each type will implement differently
+		//public abstract double calculateCost(int hours);
+		//
+		//// Method to add rating
+		//public void addRating(int stars, String comment) {
+		//   ratings.add(new Rating(stars, comment));
+		//}
+		//
+		//// Method to get average rating
+		//public double getAverageRating() {
+		//   if (ratings.isEmpty()) return 0.0;
+		//   return ratings.stream()
+//		                .mapToInt(Rating::getStars)
+//		                .average()
+//		                .orElse(0.0);
+		//}
+		//}
+}

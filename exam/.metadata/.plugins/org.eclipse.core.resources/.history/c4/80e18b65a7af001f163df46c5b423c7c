@@ -1,0 +1,602 @@
+package Problem;
+
+import java.util.Scanner;
+
+public class SwimmingPoolWalkAway {
+	
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int L = input.nextInt();  
+	    int W = input.nextInt(); 
+	    int totalArea = input.nextInt();  
+	      
+	   
+	  	      
+	  	      double a = 4;
+	  	      double b ;
+	  	      double c ;
+	  	      
+	  	    
+	  	      double x = (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a);
+	      
+	      
+	      System.out.printf("%.2f%n", x);
+	      
+	      input.close();
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//import java.util.Scanner;
+//
+//public class hello {
+//  public static void main(String[] args) {
+//      Scanner scanner = new Scanner(System.in);
+//      
+//      // Read input values
+//      int L = scanner.nextInt();  // Length of pool
+//      int W = scanner.nextInt();  // Width of pool
+//      int totalArea = scanner.nextInt();  // Total area including walkway
+//      
+//      // Calculate walkway width using quadratic equation
+//      // If total area = (L + 2x)(W + 2x), where x is walkway width
+//      // (L + 2x)(W + 2x) = totalArea
+//      // 4x² + 2x(L + W) + (L*W - totalArea) = 0
+//      
+//      double a = 4;
+//      double b = 2 * (L + W);
+//      double c = L * W - totalArea;
+//      
+//      // Using quadratic formula: x = (-b + sqrt(b² - 4ac)) / (2a)
+//      // We only want the positive solution
+//      double x = (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a);
+//      
+//      // Round to 2 decimal places and print
+//      System.out.printf("%.2f%n", x);
+//      
+//      scanner.close();
+//  }
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//import java.util.*;
+//
+//public class hello {
+//    static class Edge {
+//        int dest;
+//        int time;
+//        
+//        Edge(int dest, int time) {
+//            this.dest = dest;
+//            this.time = time;
+//        }
+//    }
+//    
+//    static class Node implements Comparable<Node> {
+//        int station;
+//        int distance;
+//        
+//        Node(int station, int distance) {
+//            this.station = station;
+//            this.distance = distance;
+//        }
+//        
+//        @Override
+//        public int compareTo(Node other) {
+//            return Integer.compare(this.distance, other.distance);
+//        }
+//    }
+//    
+//    static int findShortestPath(List<List<Edge>> graph, int n, int start, int end) {
+//        // Initialize distances array with infinity
+//        int[] distances = new int[n + 1];
+//        Arrays.fill(distances, Integer.MAX_VALUE);
+//        distances[start] = 0;
+//        
+//        // Priority queue to store nodes to visit
+//        PriorityQueue<Node> pq = new PriorityQueue<>();
+//        pq.offer(new Node(start, 0));
+//        
+//        // Track visited stations
+//        boolean[] visited = new boolean[n + 1];
+//        
+//        while (!pq.isEmpty()) {
+//            Node current = pq.poll();
+//            int currentStation = current.station;
+//            
+//            // Skip if we've already processed this station
+//            if (visited[currentStation]) continue;
+//            
+//            // Mark as visited
+//            visited[currentStation] = true;
+//            
+//            // If we've reached the destination, return the distance
+//            if (currentStation == end) {
+//                return distances[end];
+//            }
+//            
+//            // Check all neighboring stations
+//            for (Edge edge : graph.get(currentStation)) {
+//                int nextStation = edge.dest;
+//                int travelTime = edge.time;
+//                
+//                // If we found a shorter path, update it
+//                if (!visited[nextStation] && 
+//                    distances[currentStation] != Integer.MAX_VALUE && 
+//                    distances[currentStation] + travelTime < distances[nextStation]) {
+//                    
+//                    distances[nextStation] = distances[currentStation] + travelTime;
+//                    pq.offer(new Node(nextStation, distances[nextStation]));
+//                }
+//            }
+//        }
+//        
+//        // If we can't reach the destination
+//        return -1;
+//    }
+//    
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        
+//        // Read number of stations and tracks
+//        int n = scanner.nextInt();  // stations
+//        int m = scanner.nextInt();  // tracks
+//        
+//        // Create adjacency list representation of the graph
+//        List<List<Edge>> graph = new ArrayList<>(n + 1);
+//        for (int i = 0; i <= n; i++) {
+//            graph.add(new ArrayList<>());
+//        }
+//        
+//        // Read all tracks
+//        for (int i = 0; i < m; i++) {
+//            int u = scanner.nextInt();
+//            int v = scanner.nextInt();
+//            int t = scanner.nextInt();
+//            
+//            // Add edges in both directions since the tracks are bidirectional
+//            graph.get(u).add(new Edge(v, t));
+//            graph.get(v).add(new Edge(u, t));
+//        }
+//        
+//        // Read start and end stations
+//        int start = scanner.nextInt();
+//        int end = scanner.nextInt();
+//        
+//        // Find and print the shortest path
+//        int result = findShortestPath(graph, n, start, end);
+//        System.out.println(result);
+//        
+//        scanner.close();
+//    }
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//import java.util.*;
+//
+//public class hello {
+//  static Set<String> anagrams = new TreeSet<>();
+//  
+//  static void generateAnagrams(char[] chars, int start) {
+//      if (start == chars.length - 1) {
+//          anagrams.add(new String(chars));
+//          return;
+//      }
+//      
+//      for (int i = start; i < chars.length; i++) {
+//          // Skip if we've already processed this character at this position
+//          if (i != start && chars[i] == chars[start]) continue;
+//          
+//          // Swap characters
+//          char temp = chars[start];
+//          chars[start] = chars[i];
+//          chars[i] = temp;
+//          
+//          // Recursively generate anagrams for remaining positions
+//          generateAnagrams(chars, start + 1);
+//          
+//          // Backtrack
+//          temp = chars[start];
+//          chars[start] = chars[i];
+//          chars[i] = temp;
+//      }
+//  }
+//  
+//  public static void main(String[] args) {
+//      Scanner scanner = new Scanner(System.in);
+//      String input = scanner.nextLine();
+//      
+//      // Convert string to char array and sort it
+//      char[] chars = input.toCharArray();
+//      Arrays.sort(chars);
+//      
+//      // Generate all unique anagrams
+//      anagrams.clear();
+//      generateAnagrams(chars, 0);
+//      
+//      // Print anagrams
+//      for (String anagram : anagrams) {
+//          System.out.println(anagram);
+//      }
+//      
+//      scanner.close();
+//  }
+//}
+
+
+
+
+
+
+
+//
+//import java.util.Scanner;
+//
+//class Node {
+//  int data;
+//  Node next;
+//  
+//  Node(int data) {
+//      this.data = data;
+//      this.next = null;
+//  }
+//}
+
+
+//
+//import java.util.Scanner;
+//
+//class Stack {
+//  private int[] arr;
+//  private int top;
+//  private int capacity;
+//  
+//  // Constructor to initialize the stack
+//  Stack(int size) {
+//      arr = new int[size];
+//      capacity = size;
+//      top = -1;
+//  }
+//  
+//  // Push operation
+//  public void push(int x) {
+//      if (isFull()) {
+//          System.out.println("Stack Overflow");
+//          return;
+//      }
+//      arr[++top] = x;
+//      System.out.println("Pushed " + x);
+//  }
+//  
+//  // Pop operation
+//  public void pop() {
+//      if (isEmpty()) {
+//          System.out.println("Stack Underflow");
+//          return;
+//      }
+//      System.out.println("Popped " + arr[top]);
+//      top--;
+//  }
+//  
+//  // Peek operation
+//  public void peek() {
+//      if (isEmpty()) {
+//          System.out.println("Stack is empty");
+//          return;
+//      }
+//      System.out.println("Top: " + arr[top]);
+//  }
+//  
+//  // Check if stack is empty
+//  public boolean isEmpty() {
+//      return top == -1;
+//  }
+//  
+//  // Check if stack is full
+//  public boolean isFull() {
+//      return top == capacity - 1;
+//  }
+//  
+//  // Print isEmpty status
+//  public void printIsEmpty() {
+//      System.out.println(isEmpty() ? "Stack is empty" : "Stack is not empty");
+//  }
+//  
+//  // Print isFull status
+//  public void printIsFull() {
+//      System.out.println(isFull() ? "Stack is full" : "Stack is not full");
+//  }
+//}
+//
+//public class hello {
+//  public static void main(String[] args) {
+//      Scanner scanner = new Scanner(System.in);
+//      
+//      // Read stack size
+//      int N = scanner.nextInt();
+//      Stack stack = new Stack(N);
+//      
+//      // Consume the newline
+//      scanner.nextLine();
+//      
+//      // Process operations
+//      while (scanner.hasNextLine()) {
+//          String line = scanner.nextLine();
+//          String[] parts = line.split(" ");
+//          
+//          switch (parts[0]) {
+//              case "PUSH":
+//                  stack.push(Integer.parseInt(parts[1]));
+//                  break;
+//              case "POP":
+//                  stack.pop();
+//                  break;
+//              case "PEEK":
+//                  stack.peek();
+//                  break;
+//              case "ISEMPTY":
+//                  stack.printIsEmpty();
+//                  break;
+//              case "ISFULL":
+//                  stack.printIsFull();
+//                  break;
+//          }
+//      }
+//      
+//      scanner.close();
+//  }
+//}
+
+
+//
+//
+//
+//
+//
+//import java.util.*;
+//
+////Base class for all makeup artists
+//abstract class MakeupArtist {
+//protected String name;
+//protected int yearsExperience;
+//protected double hourlyRate;
+//protected List<Rating> ratings;
+//
+//public MakeupArtist(String name, int yearsExperience, double hourlyRate) {
+//   this.name = name;
+//   this.yearsExperience = yearsExperience;
+//   this.hourlyRate = hourlyRate;
+//   this.ratings = new ArrayList<>();
+//}
+//
+//// Abstract method to calculate cost - each type will implement differently
+//public abstract double calculateCost(int hours);
+//
+//// Method to add rating
+//public void addRating(int stars, String comment) {
+//   ratings.add(new Rating(stars, comment));
+//}
+//
+//// Method to get average rating
+//public double getAverageRating() {
+//   if (ratings.isEmpty()) return 0.0;
+//   return ratings.stream()
+//                .mapToInt(Rating::getStars)
+//                .average()
+//                .orElse(0.0);
+//}
+//}
+//
+////Bridal Makeup Artist class
+//class BridalMakeupArtist extends MakeupArtist {
+//private boolean providesCustomLooks;
+//
+//public BridalMakeupArtist(String name, int yearsExperience, double hourlyRate, boolean providesCustomLooks) {
+//   super(name, yearsExperience, hourlyRate);
+//   this.providesCustomLooks = providesCustomLooks;
+//}
+//
+//@Override
+//public double calculateCost(int hours) {
+//   double baseCost = hourlyRate * hours;
+//   // Add 20% premium for custom looks
+//   return providesCustomLooks ? baseCost * 1.2 : baseCost;
+//}
+//
+//public String createCustomLook(String theme) {
+//   return String.format("Created %s bridal look with: %s features", 
+//       theme,
+//       theme.equals("traditional") ? "classic and elegant" : 
+//       theme.equals("modern") ? "minimalist and chic" : "unique and personalized"
+//   );
+//}
+//}
+//
+////Editorial Makeup Artist class
+//class EditorialMakeupArtist extends MakeupArtist {
+//private List<String> magazineCredits;
+//
+//public EditorialMakeupArtist(String name, int yearsExperience, double hourlyRate) {
+//   super(name, yearsExperience, hourlyRate);
+//   this.magazineCredits = new ArrayList<>();
+//}
+//
+//@Override
+//public double calculateCost(int hours) {
+//   // Editorial artists charge 50% more for their specialized skills
+//   return hourlyRate * hours * 1.5;
+//}
+//
+//public String createDramaticLook(String event) {
+//   return String.format("Created dramatic look for %s with bold features and artistic elements", event);
+//}
+//
+//public void addMagazineCredit(String magazine) {
+//   magazineCredits.add(magazine);
+//}
+//}
+//
+////Special Effects Makeup Artist class
+//class SpecialEffectsMakeupArtist extends MakeupArtist {
+//private Map<String, String> specialEffectsInventory;
+//
+//public SpecialEffectsMakeupArtist(String name, int yearsExperience, double hourlyRate) {
+//   super(name, yearsExperience, hourlyRate);
+//   this.specialEffectsInventory = new HashMap<>();
+//}
+//
+//@Override
+//public double calculateCost(int hours) {
+//   // Special effects artists charge double due to materials and expertise
+//   return hourlyRate * hours * 2.0;
+//}
+//
+//public void assignSpecialEffect(String project, String effect, String materials) {
+//   specialEffectsInventory.put(project, 
+//       String.format("Effect: %s, Materials needed: %s", effect, materials));
+//}
+//
+//public String getProjectDetails(String project) {
+//   return specialEffectsInventory.getOrDefault(project, "No project found");
+//}
+//}
+//
+////Rating class for storing client feedback
+//class Rating {
+//private int stars;
+//private String comment;
+//private Date date;
+//
+//public Rating(int stars, String comment) {
+//   this.stars = stars;
+//   this.comment = comment;
+//   this.date = new Date();
+//}
+//
+//public int getStars() {
+//   return stars;
+//}
+//
+//public String getComment() {
+//   return comment;
+//}
+//}
+//
+////Main class to demonstrate the system
+//public class hello {
+//public static void main(String[] args) {
+//   // Create different types of makeup artists
+//   BridalMakeupArtist bridal = new BridalMakeupArtist("Emma", 5, 100.0, true);
+//   EditorialMakeupArtist editorial = new EditorialMakeupArtist("Sophie", 8, 150.0);
+//   SpecialEffectsMakeupArtist sfx = new SpecialEffectsMakeupArtist("Jack", 10, 200.0);
+//   
+//   // Demonstrate functionality
+//   System.out.println("Bridal Makeup Cost (4 hours): $" + bridal.calculateCost(4));
+//   System.out.println(bridal.createCustomLook("modern"));
+//   
+//   System.out.println("\nEditorial Makeup Cost (6 hours): $" + editorial.calculateCost(6));
+//   editorial.addMagazineCredit("Vogue");
+//   System.out.println(editorial.createDramaticLook("Fashion Week"));
+//   
+//   System.out.println("\nSFX Makeup Cost (8 hours): $" + sfx.calculateCost(8));
+//   sfx.assignSpecialEffect("Horror Movie", "Zombie transformation", "Prosthetics, latex, blood effects");
+//   System.out.println(sfx.getProjectDetails("Horror Movie"));
+//   
+//   // Add ratings
+//   bridal.addRating(5, "Amazing wedding look!");
+//   bridal.addRating(4, "Great service");
+//   System.out.println("\nBridal Artist Average Rating: " + bridal.getAverageRating());
+//}
+//}
+

@@ -1,0 +1,10 @@
+package Problem;
+
+public class Test extends MakeUpArtist {
+	
+	public Test() {
+		MakeUpArtist mak = new MakeUpArtist();
+		mk.name = "chris";
+	}
+	
+}

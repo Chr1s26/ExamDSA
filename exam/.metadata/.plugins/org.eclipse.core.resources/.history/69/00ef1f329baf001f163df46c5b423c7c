@@ -1,0 +1,79 @@
+package Problem;
+
+import java.util.Scanner;
+import java.util.Stack;
+
+public class ImplementAStackUsingAnArray {
+	
+	private int[] arr;
+	private int top;
+	private int capacity;
+	
+	ImplementAStackUsingAnArray(int size){
+		arr = new int[size];
+		capacity = size;
+		top = -1;
+	}
+	
+	public void push(int x) {
+		if (top == capacity-1) {
+			System.out.println("Stack Overflow");
+			return;
+		}
+		arr[++top] = x;
+}
+	
+	public void pop() {
+		if (top == -1) {
+			System.out.println("Stack Overflow");
+			return;
+		}
+		System.out.println("Popped " + arr[top]);
+		top--;
+}
+	
+	public boolean isFull() {
+		return top == capacity - 1;
+	}
+	
+	public boolean isEmpty() {
+		return top == -1;
+	}
+
+	public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+      
+    
+      int N = scanner.nextInt();
+      ImplementAStackUsingAnArray stack = new ImplementAStackUsingAnArray(N);
+      
+     
+      scanner.nextLine();
+      
+      
+      while (scanner.hasNextLine()) {
+          String line = scanner.nextLine();
+          String[] parts = line.split(" ");
+          
+          switch (parts[0]) {
+              case "PUSH":
+                  stack.push(Integer.parseInt(parts[1]));
+                  break;
+              case "POP":
+                  stack.pop();
+                  break;
+              case "PEEK":
+//                  stack.peek();
+                  break;
+              case "ISEMPTY":
+//                  stack.printIsEmpty();
+                  break;
+              case "ISFULL":
+//                  stack.printIsFull();
+                  break;
+          }
+      }
+      
+      scanner.close();
+	}
+}

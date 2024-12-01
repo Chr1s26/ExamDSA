@@ -1,0 +1,2417 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module Exam {
+}
+
+// Constructor super Car Vehicle
+
+//private String ownerName;
+//private String model;
+//private String licenseNo;
+//private double pricePerDay;
+//private static int vehicleCount = 0;
+//private static final int maxVehicleCount = 100;
+//
+//public Vehicle(String ownerName,String model,String licenseNo,double pricePerDay) {
+//	this.ownerName = ownerName;
+//	this.model = model;
+//	this.licenseNo = licenseNo;
+//	this.pricePerDay = pricePerDay;
+//}
+//
+//public Vehicle (Vehicle vehicleModel) {
+//	this.ownerName = vehicleModel.ownerName;
+//	this.model = vehicleModel.model;
+//	this.licenseNo = vehicleModel.licenseNo;
+//	this.pricePerDay = vehicleModel.pricePerDay;
+//	this.vehicleCount ++;
+//}
+//
+//private int numSeats;
+//private String carType;
+//private static final int maxCarCount = 100;
+//private static int CarCount = 0;
+//
+//public Car(Vehicle vehicle, int numSeats,String carType) {
+//	super(vehicle);
+//	this.numSeats = numSeats;
+//	this.carType = carType;
+//	this.CarCount++;
+//}
+//public interface CarDao {
+//
+//	void addCarModel(Car car);
+//	Car getCarModelByLicenseNumber(String name);
+//	void deleteCarModelByLicenseNumber(String license);
+//
+//}
+
+//private static Car[] cars = new Car[Car.getMaxcarcount()];
+//
+//@Override
+//public void addCarModel(Car car) {
+//	cars[Car.getCarCount()-1] = car;
+//}
+//
+//
+//@Override
+//public Car getCarModelByLicenseNumber(String name) {
+//		for(int i = 0; i < Car.getCarCount();i++) {
+//			if(cars[i].getLicenseNo().equalsIgnoreCase(name)) {
+//				return cars[i];}}
+//		return null;
+//}
+//
+//
+//@Override
+//public void deleteCarModelByLicenseNumber(String license) {
+//	
+//	 for (int i = 0; i < Car.getCarCount(); i++) {
+//            if (cars[i] != null && cars[i].getLicenseNo().equalsIgnoreCase(license)) {
+//            	
+//                for (int j = i; j < Car.getCarCount() - 1; j++) {
+//                    cars[j] = cars[j + 1];}
+//                
+//                cars[Car.getCarCount() - 1] = null; 
+//                Car.setCarCount(Car.getCarCount() - 1);
+//                Rental.setCarRentalCount(Rental.getCarRentalCount()+1);
+//                break;}}
+//}
+//
+//
+//
+//public static Car[] getCars() {
+//	return cars;
+//}
+
+//public class Rental {
+//
+//	private static int rentalId = 0;
+//	private String vehicleType;
+//	private Vehicle vehicle;
+//	private int rentedDays;
+//	private double totalPrice;
+//	private final static int maxRentalCount = 100;
+//	private static int rentalCount = 0;
+//	private static int carRentalCount = 0;
+//	private static int motorCycleRentalCount = 0;
+//	private Customer customer;
+//	
+//
+//	public Rental(String vehicleType,int rentedDays,double totalPrice,Customer customer) {
+//		this.vehicleType = vehicleType;
+//		this.rentedDays = rentedDays;
+//		this.totalPrice = totalPrice;
+//		this.customer = customer;      //*
+//		rentalCount++;
+//		this.rentalId = rentalCount;
+//	}
+
+
+//static BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+//static CarRegisterationService carRegisterationService = new CarRegisterationService();
+//static MotorCycleRegisterationService motorCycleRegisterationService = new MotorCycleRegisterationService();
+//static CarRentalService carRentalService = new CarRentalService();
+//static MotorCycleRentalService motorCycleRentalService = new MotorCycleRentalService();
+//
+//
+//public static void main(String[] args) throws NumberFormatException, IOException {
+//	
+//	
+//	System.out.println("----Welcome From Car and Motorcycle Rental System----");
+//	int number = 0;
+//	do {
+//		System.out.println("\n1.To add a Vehicle to the system");
+//		System.out.println("2.To rent Vehicle");
+//		System.out.println("3.To show Sale Report");
+//		System.out.println("4.Display Vehicle");
+//		System.out.println("5.Exit");
+//		number = Integer.parseInt(bufferedReader.readLine());
+//		
+//		switch (number) {
+//		case 1:  addVehicle(); break;
+//		
+//		case 2: rentVehicle(); break;
+//		
+//		case 3: displaySaleReportOfVehicle(); break;
+//		 
+//		case 4: displayVehicle(); break;
+//			
+//		default:break;}
+//	}while(number != 5);
+//	
+//	System.out.println("Thank you for using the Car and Motorcycle Management System.GoodBye!");
+//}
+//
+//
+//
+//public static void addVehicle() throws IOException {
+//	if(getType().equalsIgnoreCase("car")) {
+//		carRegisterationService.addVehicle();
+//		System.out.println("Car added successfully!!");}
+//	else {
+//		motorCycleRegisterationService.addVehicle();
+//		System.out.println("MotorCycle added successfully!!");}
+//	}
+//
+//public static void displayVehicle() throws IOException{
+//		carRegisterationService.DisplayVehicle();
+//		motorCycleRegisterationService.DisplayVehicle();
+//}
+//
+//public static void rentVehicle() throws IOException{
+//	if(getType().equalsIgnoreCase("car")) {
+//		carRentalService.RentVehicle();
+//	}
+//	else {
+//		motorCycleRentalService.RentVehicle();
+//	}
+//}
+//
+//public static void displaySaleReportOfVehicle() throws IOException {
+//		carRentalService.displaySaleReport();
+//		motorCycleRentalService.displaySaleReport();
+//	}
+//
+//	
+//public static String getType() throws IOException {
+//	System.out.println("Enter the vehicle Type : ");
+//	String type = bufferedReader.readLine();
+//	return type;
+//}
+//------------------------------------------------------------------------------------------------------------------------------------
+
+//Exam System
+//
+//package ExamManagementSystem;
+//
+//public class Question {
+//	
+//	private String question;
+//	private String answer;
+//	private String[] multipleChoices = new String[4];
+//	
+//	public Question() {
+//		
+//	}
+//	
+//	public Question(String question,String answer,String[] multipleChoice) {
+//		this.question = question;
+//		this.answer = answer;
+//		this.multipleChoices = multipleChoice;
+//	}
+//	
+//	public String getQuestion() {
+//		return question;
+//	}
+//	
+//	public void setQuestion(String question) {
+//		this.question = question;
+//	}
+//	
+//	public String[] getMultipleChoices() {
+//		return multipleChoices;
+//	}
+//	
+//	public void setMultipleChoice(String[] multipleChoices) {
+//		this.multipleChoices = multipleChoices;
+//	}
+//	
+//	public String getanswer() {
+//		return answer;
+//	}
+//	
+//	public void setanswer(String answer) {
+//		this.answer = answer;
+//	}
+//}
+//
+//
+//public class Exam {
+//    private Question[] questions;
+//    
+//    public Exam() {
+//        
+//    }
+//    
+//    public Exam(Question[] questions) {
+//        this.questions = questions;
+//    }
+//    
+//    public Question[] getQuestions() {
+//        return questions;
+//    }
+//    
+//    public void setQuestions(Question[] questions) {
+//        this.questions = questions;
+//    }
+//}
+
+//package ExamManagementSystem;
+//
+//import java.io.BufferedReader;
+//import java.io.IOException;
+//import java.io.InputStreamReader;
+//
+//public class ExamService {
+//    static BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
+//    Exam exam = new Exam();
+//    
+//    public void createExam() throws IOException {
+//        System.out.println("Enter the number of questions for the exam:");
+//        int numberOfQuestions = Integer.parseInt(bReader.readLine());
+//        
+//        Question[] questions = new Question[numberOfQuestions];
+//        
+//        for (int i = 0; i < numberOfQuestions; i++) {
+//            System.out.printf("Creating question %d\n", i + 1);
+//            QuestionService questionService = new QuestionService();
+//            
+//            questionService.createQuestion();
+//            
+//            questionService.createMultipleChoice();
+//            
+//            questionService.createAnswer();
+//            
+//            questions[i] = questionService.getQuestionObject(); 
+//        }
+//        
+//        exam.setQuestions(questions);
+//    }
+//    
+//    public void displayExam() {
+//        Question[] questions = exam.getQuestions();
+//        for (int i = 0; i < questions.length; i++) {
+//            System.out.printf("\nQuestion %d: %s\n", i + 1, questions[i].getQuestion());
+//            String[] choices = questions[i].getMultipleChoices();
+//            for (int j = 0; j < choices.length; j++) {
+//                System.out.printf("    %d. %s\n", j + 1, choices[j]);
+//            }
+//            System.out.printf("Answer: %s\n", questions[i].getanswer());
+//        }
+//    }
+//}
+//package ExamManagementSystem;
+//
+//import java.io.BufferedReader;
+//import java.io.IOException;
+//import java.io.InputStreamReader;
+//
+//public class QuestionService {
+//	static BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
+//	Question question = new Question();
+//	
+//	public void createQuestion() throws IOException {
+//		System.out.println("Create a question");
+//		String createdquestion = bReader.readLine();
+//		question.setQuestion(createdquestion);
+//	}
+//	
+//	public String getQuestion() {
+//		return question.getQuestion();
+//	}
+//	
+//	public void createMultipleChoice() throws IOException {
+//		System.out.println("Created multiple choice for a question");
+//		String createdMultipleChoices = bReader.readLine();
+//		question.setQuestion(createdMultipleChoices);
+//	}
+//	
+//	public String[] getMultipleChoice() {
+//		return question.getMultipleChoices();
+//	}
+//	
+//	public void createAnswer() throws IOException {
+//		System.out.println("Enter an answer for that multiple choice for a question: ");
+//		String answer = bReader.readLine();
+//		question.setanswer(answer);
+//	}
+//	
+//	public String getAnswer() {
+//		return question.getanswer();
+//	}
+//	
+//	 public Question getQuestionObject() {
+//	        return question;
+//	    }
+//	
+//	
+//	
+//}
+//
+//String[] questionArrayList = new String[1000];
+//String[][] choiceArrayList = new String[1000][4];
+//int[] answerArrayList = new int[1000];
+//
+//BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
+//
+//System.out.println("Enter the number of question ");
+//int number = Integer.parseInt(bReader.readLine());
+//
+//for(int index = 0; index < number; index ++) {
+//	
+//	System.out.printf("Enter question %d ",index+1);
+//	questionArrayList[index] = bReader.readLine();
+//
+//	for(int i = 0; i < 4; i++) {
+//		
+//		System.out.printf("Enter choice %d ",i);
+//		choiceArrayList[index][i] = bReader.readLine();
+//}
+//	System.out.println("Enter the correct answer number (1-4) ");
+//	int answer = Integer.parseInt(bReader.readLine());
+//	answerArrayList[index] = answer;
+//}
+//
+//	System.out.println("The questions are :");
+//	for(int index = 0; index < number; index ++) {
+//		System.out.printf("\nQuestion %d: %s\n ",index+1,questionArrayList[index]);
+//		
+//		for(int i = 0; i < 4; i++) {
+//			System.out.printf("	%d. %s ",i+1,choiceArrayList[index][i]);
+//			
+//}
+//		System.out.println("\n Correct answer is "+answerArrayList[index]);
+//		System.out.println("");
+//		}}
+
+//------------------------------------------------------------------------------------------------------------------------------------
+
+//Library
+//
+//
+//private String title;
+//private String author;
+//private String ISBN;
+//private boolean isAvailable;
+//
+//
+//
+//public Book(String title,String author,String ISBN) {
+//	this.title = title;
+//	this.author = author;
+//	this.ISBN = ISBN;
+//	this.isAvailable = true;
+//
+//}
+//
+//public String getTitle() {
+//	return this.title;
+//}
+//
+//public boolean isAvailable() {
+//	return isAvailable;
+//}
+//
+//public void borrow() {
+//	isAvailable = false;
+//}
+//
+//public void returnBook() {
+//	isAvailable = true;
+//	
+//}
+//
+//@Override
+//public String toString() {
+//	return "Book title =" + title + ", author=" + author + ", ISBN=" + ISBN + ", isAvailable=" + isAvailable;
+//}
+//
+//private ArrayList<Book> books;
+//private ArrayList<Member> members;
+//
+//public Library() {
+//	this.books = new ArrayList<>();
+//	this.members = new ArrayList<>();
+//}
+//
+//public void addBook(Book book) {
+//	System.out.println("Book's added successfully!!");
+//	books.add(book);
+//}
+//
+//public void addMember(Member member) {
+//	if (members.contains(member)) {
+//		System.out.println("This member is already registered!!");
+//	}
+//	else {
+//		System.out.println("Registering member's success!");
+//		members.add(member) ;
+//	}
+//}
+//
+//
+//public void borrowBook(Member member,Book book) {
+//	if(books.contains(book)) {
+//	   System.out.println("Borrowing book's successful!!");
+//	   member.borrowBook(book);
+//	   books.remove(book);
+//	   }
+//	else {
+//		System.out.println("There is no book with that name in this library");
+//	}
+//}
+//
+//public void returnBook(Member member,Book book) {
+//	if(books.contains(book)) {
+//		System.out.println("This book is not from this library");
+//	}
+//	else {
+//		System.out.println("Retruning book's successful!!");
+//		member.returnBook(book);
+//		books.add(book);
+//		}
+//		
+//}
+//
+//
+//public Book findBook(String title) {
+//	
+//	for(int index = 0; index < books.size();index++) {
+//		if(books.get(index).getTitle().equalsIgnoreCase(title)) {
+//			System.out.println("Book's found successfully!");
+//			return books.get(index);
+//		}
+//		else {
+//			System.out.println("There is no book with that title!!");
+//			return null;
+//		}
+//	}
+//	return null;
+//}
+//
+//
+//public Member findMember(int memberId) {
+//	
+//	for(int index = 0; index < books.size(); index++) {
+//		if(members.get(index).getMemberId() == memberId) {
+//			return members.get(index);
+//		}
+//		else {
+//			System.out.println("This member isn't registered at this library");
+//			return null;
+//		}
+//	}
+//	return null;
+//	
+//}
+//
+//public void displayBooks() {
+//	for(int index = 0; index < books.size(); index++) {
+//		System.out.println(books.get(index));
+//	}
+//}
+//
+//public void displayMembers() {
+//	for(int index = 0; index < members.size(); index++) {
+//	System.out.println(members.get(index));}
+//}
+//
+//private String name;
+//private int memberId;
+//private ArrayList<Book> borrowBooks;
+//
+//public Member(String name, int memberId) {
+//	this.name = name;
+//	this.memberId = memberId;
+//	this.borrowBooks = new ArrayList<>();
+//}
+//
+//public String getName() {
+//	return name;
+//}
+//
+//public void borrowBook(Book book) {
+//	if(book.isAvailable()) {
+//	    borrowBooks.add(book);
+//	    book.borrow();
+//	    }
+//	else {
+//		System.out.println("You can't borrow this book");
+//	}
+//}
+//
+//public void returnBook(Book book) {
+//	
+//	if(borrowBooks.contains(book)) {
+//		book.returnBook();
+//	    borrowBooks.remove(book);
+//	    
+//	    }
+//	else {
+//	System.out.println("This member didn't borrow that book");
+//}}
+//
+//public int getMemberId() {
+//	return memberId;
+//}
+//
+//@Override
+//public String toString() {
+//	return "Member name is "+this.name + " and member's id is "+this.memberId;
+//}
+
+//------------------------------------------------------------------------------------------------------------------------------------
+
+//Student Management System
+//
+//public class Student {
+//
+//	private String id;
+//	private String name;
+//	private int age;
+//	private boolean isRegular;
+//	private static int studentCount = 0; 
+//	private static int interStudentCount = 0;
+//	private static int regularStudentCount = 0;
+//	private Subject[] subjects;
+//	private int subjectCount = 0;
+//	private static double maxAvgMarks ;
+//		
+//	public Student(String name,int age) {
+//		this.name = name;
+//		this.age = age;
+//	}
+//	
+//	
+//	public Student(Student student,boolean isRegular) {
+//		this.name = student.name;
+//		this.age = student.age;
+//		this.isRegular = isRegular;
+//		studentCount++;
+//		this.id = "STU"+studentCount;
+//		if(isRegular) {
+//			regularStudentCount++;
+//		}
+//		else {
+//			interStudentCount++;
+//		}
+//		 this.subjects = new Subject[Subject.maxSubCount]; 
+//	     this.subjectCount = 0;
+//		
+//	}
+
+
+//public class InternationalStudent extends Student{
+//
+//private VisaInformation visaInformantion;
+//	
+//	public InternationalStudent(Student student, VisaInformation visaInfo) {
+//		super(student,false);
+//		this.visaInformantion = visaInfo;
+//	}
+//	
+//	@Override
+//	public String toString() {
+//		return super.toString() + visaInformantion.toString();
+//	}
+//
+//}
+//
+//public class Subject {
+//
+//	private String SubjectName;
+//	private String SubjectId;
+//	private double marks;
+//	private Student student;
+//	public static final int maxSubCount = 8;
+//	
+//	public Subject(String subjectName,String SubjectId,double marks,Student student) {
+//		this.SubjectName = subjectName;
+//		this.SubjectId = SubjectId;
+//		this.marks = marks;
+//		this.student = student;
+//		this.addSubject();
+//		
+//	}
+
+//------------------------------------------------------------------------------------------------------------------------------------
+
+
+//BankingSystem
+//
+//
+//public interface ConnectionFactory {
+//	
+//	Connection createConnection() throws SQLException;
+//	void closeConnection();
+//	
+//}
+//import java.sql.Connection;
+//import java.sql.DriverManager;
+//import java.sql.SQLException;
+//
+//public class PgSqlConnectionFactory implements ConnectionFactory {
+//	
+//	private static final String URL = "jdbc:postgresql://localhost:5432/banking_db";
+//	private static final String USERNAME = "postgres";
+//	private static final String PASSWORD = "682682";
+//	private Connection connection;
+//
+//	@Override
+//	public Connection createConnection() throws SQLException {
+//		this.connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
+//		return this.connection;
+//	}
+//
+//	
+//	@Override
+//	public void closeConnection() {
+//		try {
+//			this.connection.close();
+//		}catch(SQLException e){
+//			System.out.print(e.getMessage());
+//		}
+//	}
+//
+//}
+//
+//public abstract class AbstractDao<T> {
+//	
+//	public ConnectionFactory connectionFactory;
+//	
+//	public AbstractDao() {
+//		this.connectionFactory = new PgSqlConnectionFactory();
+//	}
+//	
+//	public abstract String getTableName();
+//	
+//	public abstract T converToObject(ResultSet resultset);
+//	
+//	public abstract String getInsertQuery();
+//	
+//	public abstract String getUpdateQuery();
+//	
+//	public abstract String getDeleteQuery();
+//	
+//	public abstract void prepareParams(PreparedStatement preparedStatement,T object);
+//	
+//	public abstract void prepareParamsForUpdate(PreparedStatement preparedStatement,T object);
+//	
+//	public void create(T object) {
+//		try {
+//			String query = this.getInsertQuery();
+//			Connection connection = connectionFactory.createConnection();
+//			PreparedStatement preparedStatement = connection.prepareStatement(query);
+//			this.prepareParams(preparedStatement, object);
+//			preparedStatement.executeUpdate();
+//			this.connectionFactory.closeConnection();
+//		}catch(SQLException e) {
+//			System.out.print("SQL Exception for : "+e.getMessage());
+//		}finally{
+//			this.connectionFactory.closeConnection();
+//		}
+//	}
+//	
+//	
+//	public void update(T object) {
+//		try {
+//			String query = this.getUpdateQuery();
+//			Connection connection = connectionFactory.createConnection();
+//			PreparedStatement preparedStatement = connection.prepareStatement(query);
+//			this.prepareParamsForUpdate(preparedStatement, object);
+//			preparedStatement.executeUpdate();
+//		}catch(SQLException e) {
+//			System.out.print("SQL Exception for : "+e.getMessage());
+//		}finally {
+//			this.connectionFactory.closeConnection();
+//		}
+//	}
+//	
+//	public void delete(int id) {
+//		try {
+//			String query = this.getDeleteQuery();
+//			Connection connection = connectionFactory.createConnection();
+//			PreparedStatement preparedStatement = connection.prepareStatement(query);
+//			preparedStatement.setInt(1, id);
+//			preparedStatement.executeUpdate();
+//		}catch(SQLException e){
+//			System.out.print("SQL Exception : "+e.getMessage());
+//		}finally {
+//			this.connectionFactory.closeConnection();
+//		}
+//	}
+//	
+//	public List<T> getAll() {
+//		List<T> objects = new ArrayList<T>();
+//		try {
+//		String query = "SELECT * FROM "+this.getTableName();
+//		Connection connection = this.connectionFactory.createConnection();
+//		PreparedStatement preparestatement = connection.prepareStatement(query);
+//		ResultSet resultset = preparestatement.executeQuery();
+//		while(resultset.next()) {
+//			T object = this.converToObject(resultset);
+//			objects.add(object);
+//		}
+//		}
+//		catch (SQLException e) {
+//			System.out.print("SQL Exception for : "+e.getMessage());
+//			
+//		}finally {
+//			this.connectionFactory.closeConnection();
+//		}
+//		return objects;
+//	}
+//	
+//	public T getById(int id)  {
+//		T object = null;
+//		try {
+//			String query = "SELECT * FROM "+this.getTableName()+" WHERE id = ?";
+//			Connection connection = connectionFactory.createConnection() ;
+//			PreparedStatement prepareStatement = connection.prepareStatement(query);
+//			prepareStatement.setInt(1, id);
+//			ResultSet resultSet = prepareStatement.executeQuery();
+//			if(resultSet.next()) {
+//				object = this.converToObject(resultSet);
+//			}
+//		} catch (SQLException e) {
+//			System.out.print("SQL Exception for : "+e.getMessage());
+//		}
+//		finally {
+//			this.connectionFactory.closeConnection();
+//		}
+//		return object;
+//	}
+//}
+//
+//public class AccountTransactionDaoImpl extends AccountTransactionDao{
+//	
+//	private AccountDaoImpl accountDao;
+//	private TransactionDaoImpl transactionDao;
+//	
+//	public AccountTransactionDaoImpl() {
+//		accountDao = new AccountDaoImpl();
+//		transactionDao = new TransactionDaoImpl();
+//	}
+//	
+//	@Override
+//	public String getTableName() {
+//		return "account_transaction";
+//	}
+//
+//	@Override
+//	public AccountTransaction converToObject(ResultSet resultset) {
+//		AccountTransaction accountTransaction = null;
+//		try {
+//			int id = resultset.getInt("id");
+//			int type = resultset.getInt("transaction_type");
+//			double amount = (double) resultset.getFloat("amount");
+//			Timestamp transactionDate = resultset.getTimestamp("transaction_date");
+//			String description = resultset.getString("description");
+//			int status = resultset.getInt("status");
+//			int currency = resultset.getInt("currency");
+//			int transactionId = resultset.getInt("transaction_id");
+//			int accountId = resultset.getInt("account_id");
+			//Date createdAt = resultset.getDate("created_at");
+//			
+//			Account account = accountDao.getById(accountId);
+//			Transaction transaction = transactionDao.getById(transactionId);
+//			
+//			accountTransaction = new AccountTransaction(id,AccountTransactionType.fromValue(type),amount,transactionDate,description,StatusType.fromValue(status),CurrencyType.fromValue(currency),transaction,account);
+//		} catch(SQLException e) {
+//			System.out.print("SQL Exception for : "+ e.getMessage());
+//		}
+//		return accountTransaction;
+//	}
+//
+//	@Override
+//	public String getInsertQuery() {
+//		return "Insert into "+this.getTableName()+" (transaction_type,amount,description,status,currency,transaction_id,account_id) values (?,?,?,?,?,?,?)";
+//	}
+//
+//	@Override
+//	public String getUpdateQuery() {
+//		return "update "+this.getTableName()+" set transaction_type = ? amount = ? description = ? status = ? currency = ? transaction_id = ? account_id = ? where id = ?";
+//	}
+//
+//	@Override
+//	public String getDeleteQuery() {
+//		return "delete from "+this.getTableName()+" where id = ?";
+//	}
+//
+//	@Override
+//	public void prepareParams(PreparedStatement preparedStatement, AccountTransaction object) {
+//		try {
+//			System.out.print(object.getTransaction());
+//			preparedStatement.setInt(1, object.getTransactionType().getValue());
+//			preparedStatement.setFloat(2, (float)object.getAmount());
+//			preparedStatement.setString(3, object.getDescription());
+//			preparedStatement.setInt(4, object.getStatus().getValue());
+//			preparedStatement.setInt(5, object.getCurrency().getValue());
+//			preparedStatement.setInt(6, object.getTransaction().getId());
+//			preparedStatement.setInt(7, object.getAccount().getId());
+//		} catch(SQLException e) {
+//			System.out.print("SQL Exception for accountTransactionDao : "+ e.getMessage());
+//		}
+//		
+//	}
+//
+//	@Override
+//	public void prepareParamsForUpdate(PreparedStatement preparedStatement, AccountTransaction object) {
+//		try {
+//			preparedStatement.setInt(1, object.getTransactionType().getValue());
+//			preparedStatement.setFloat(2, (float)object.getAmount());
+//			preparedStatement.setString(3, object.getDescription());
+//			preparedStatement.setInt(4, object.getStatus().getValue());
+//			preparedStatement.setInt(5, object.getCurrency().getValue());
+//			preparedStatement.setInt(6, object.getTransaction().getId());
+//			preparedStatement.setInt(7, object.getAccount().getId());
+//			preparedStatement.setInt(8, object.getId());
+//		} catch(SQLException e) {
+//			System.out.print("SQL Exception for : "+ e.getMessage());
+//		}
+//		
+//	}
+//
+//	
+//}
+
+
+
+
+//package Model;
+//
+//public enum AccountTransactionType {
+//	
+//	DEPOSIT(1),
+//	WITHDRAWL(2),
+//	FAILED(3);
+//	
+//	private final int value;
+//	
+//	AccountTransactionType(int value){
+//		this.value = value;
+//	}
+//	
+//	public int getValue() {
+//		return this.value;
+//	}
+//	
+//	public static AccountTransactionType fromValue(int value) {
+//		for(AccountTransactionType type : AccountTransactionType.values()) {
+//			if(type.getValue() == value) {
+//				return type;
+//			}
+//		}
+//		throw new IllegalArgumentException();                
+//	}
+//}
+
+//public class Employee {
+//	
+//	private int id;
+//	private String firstName;
+//	private String lastName;
+//	private String email;
+//	private String encryptPassword;
+//	private String phoneNumber;
+//	private String position;
+//	private double salary;
+//	private Branch branch;
+//	private String LoginToken;
+//	private Date confirmedAt;
+//	
+//	public Employee() {
+//		
+//	}
+
+//public class LoanDTO {
+//	
+//	private int id;
+//	private LoanType loanType;
+//	private double loanAmount;
+//	private double interestRate;
+//	private Date loanStartDate;
+//	private Date loanEndDate;
+//	private Customer customer;
+//	
+//	private int id;
+//	private String cardNumber;
+//	private CardType cardType;
+//	private Date expireDate;
+//	private int securityCode;
+//	private Customer customer;
+//	private Account account;
+
+//public static Employee toEmployee(EmployeeDTO employeeDto) {
+//	
+//	Employee employee = new Employee();
+//	employee.setfirstName(employeeDto.getFirstName());
+//	employee.setlastName(employeeDto.getLastName());
+//	employee.setBranch(branchDao.getById(employeeDto.getBranchId()));
+//	employee.setEmail(employeeDto.getEmail());
+//	employee.setSalary(Double.parseDouble(employeeDto.getSalary()));
+//	employee.setEncryptPassword(PasswordUtil.encryptPassword(employeeDto.getPassword()));
+//	employee.setPhoneNumber(employeeDto.getPhoneNumber());
+//	employee.setPosition(employeeDto.getPosition());
+//	employee.setId(employeeDto.getId());
+//	return employee;
+//}
+
+//public class IncorrectEmailException extends Exception {
+//	
+//	public IncorrectEmailException(String message) {
+//		super(message);
+//	}
+//	
+//}
+
+//---------------
+//View 
+//accountTypeLabel = new JLabel("Account Type : ");
+//accountTypeCombo = new JComboBox<>(AccountType.values());
+
+//branchLabel = new JLabel("Branch : ");
+//branchCombo = new JComboBox<>(branchDao.getAll().toArray(new Branch[0]));
+//
+//customerLabel = new JLabel("Customer : ");
+//customerCombo = new JComboBox<>(customerDao.getAll().toArray(new Customer[0]));
+
+//public Customer getCustomer() {
+//	Customer customer = (Customer)this.customerCombo.getSelectedItem();
+//	return customer;
+//}
+//
+//public AccountType getAccountType() {
+//	return (AccountType)this.accountTypeCombo.getSelectedItem();
+//}
+
+//public class BaseWindow extends JFrame {
+//	
+//	private String title;
+//	private String[][] tableData;
+//	private String[] columns;
+//	private JTable dataTableTemplate;
+//	private JScrollPane scrollPane;
+//	private DefaultTableModel tableModel;
+//	
+//	public BaseWindow() {
+//		initializeBaseFrame();
+//	}
+//	
+//	private void initializeBaseFrame() {
+//		this.setLayout(new BorderLayout());
+//		this.setLocation(200,300);
+//		this.setSize(540,250);
+//		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//	}
+//	
+//	public void createDataTable(String[][] data,String[] column) {
+//		this.tableData = data; 
+//		this.columns = column;
+//		this.tableModel = new DefaultTableModel(null,columns);
+//		this.dataTableTemplate = new JTable(this.tableModel);
+//		this.scrollPane = new JScrollPane(this.dataTableTemplate);
+//		this.add(this.scrollPane,BorderLayout.CENTER);
+//		loadDataTable();
+//	}
+//	
+//	public void refreshDataTable(String[][] updatedData) {
+//		this.tableData = updatedData;
+//		this.tableModel.setRowCount(0);
+//		loadDataTable();
+//	}
+//	
+//	public void loadDataTable() {
+//		for(String[] dataArr : this.tableData) {
+//			this.tableModel.addRow(dataArr);
+//		}
+//	}
+//	
+//	public JTable getDataTableTemplate() {
+//		return dataTableTemplate;
+//	}
+//	
+//	public void showErrorMessage(String errorMessage) {
+//		JOptionPane.showMessageDialog(this, errorMessage);
+//	}
+//	
+//	public void showSuccessMessage(String string) {
+//		JOptionPane.showMessageDialog(this, string);
+//	}
+
+//public class LoginWindow extends BaseWindow {
+//	
+//    JLabel emailLabel = new JLabel("Email:");
+//    JTextField emailField = new JTextField(20);
+//    JLabel passwordLabel = new JLabel("Password:");
+//    JPasswordField passwordField = new JPasswordField(20);
+//    JButton loginButton = new JButton("Login");
+//
+//    public LoginWindow(){
+//        this.setTitle("Login Window");
+//        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        this.setSize(400, 250);
+//        this.setLayout(new BorderLayout());
+//        initializeComponent();
+//    }
+//
+//    public void initializeComponent(){
+//        JPanel panel = new JPanel(new GridBagLayout());
+//        GridBagConstraints constraints = new GridBagConstraints();
+//        constraints.insets = new Insets(10, 10, 10, 10);
+//        constraints.anchor = GridBagConstraints.WEST;
+//        constraints.gridx = 0;
+//        constraints.gridy = 0;
+//        panel.add(emailLabel, constraints);
+//
+//        constraints.gridx = 1;
+//        panel.add(emailField, constraints);
+//
+//        constraints.gridx = 0;
+//        constraints.gridy = 1;
+//        panel.add(passwordLabel, constraints);
+//
+//        constraints.gridx = 1;
+//        panel.add(passwordField, constraints);
+//
+//
+//        constraints.gridx = 1;
+//        constraints.gridy = 2;
+//        constraints.anchor = GridBagConstraints.CENTER;
+//        panel.add(loginButton, constraints);
+//        this.add(panel, BorderLayout.CENTER);
+//        this.setVisible(true);
+//    }
+//
+//	public JButton getLoginButton() {
+//		return loginButton;
+//	}
+//
+//	public JTextField getEmailField() {
+//		return emailField;
+//	}
+//
+//	public void setEmailField(JTextField emailField) {
+//		this.emailField = emailField;
+//	}
+//
+//	public JPasswordField getPasswordField() {
+//		return passwordField;
+//	}
+//
+//	public void setPasswordField(JPasswordField passwordField) {
+//		this.passwordField = passwordField;
+//	}
+//    
+//this.homeMenu = new JMenuBar();
+//this.employeeMenu = new JMenu("Employee");
+//this.employeeListing = new JMenuItem("Employee Listing");
+//this.branchMenu = new JMenu("Branch");
+//this.branchListing = new JMenuItem("Branch Listing");
+//this.customerMenu = new JMenu("Customer");
+//this.customerListing = new JMenuItem("Customer Listing");
+//this.accountMenu = new JMenu("Account");
+//this.accountListing = new JMenuItem("Account Listing");
+//this.loanMenu = new JMenu("Loan");
+//this.loanListing = new JMenuItem("Loan Listing");
+//this.transactionMenu = new JMenu("Transaction");
+//this.transactionListing = new JMenuItem("Transaction Listing");
+//this.transferMoney = new JMenuItem("Transfer Money");
+//this.cardMenu = new JMenu("Card");
+//this.cardListing = new JMenuItem("Card Listing");
+//this.cardTransactionMenu = new JMenu("Card Transaction");
+//this.cardTransactionListing = new JMenuItem("Card Transaction Listing");
+//
+//this.homeMenu.add(employeeMenu);
+//this.homeMenu.add(customerMenu);
+//this.homeMenu.add(branchMenu);
+//this.homeMenu.add(accountMenu);
+//this.homeMenu.add(loanMenu);
+//this.homeMenu.add(cardMenu);
+//this.homeMenu.add(transactionMenu);
+//this.homeMenu.add(cardTransactionMenu);
+//
+//this.employeeMenu.add(employeeListing);
+//this.customerMenu.add(customerListing);
+//this.branchMenu.add(branchListing);
+//this.accountMenu.add(accountListing);
+//this.loanMenu.add(loanListing);
+//this.cardMenu.add(cardListing);
+//this.transactionMenu.add(transactionListing);
+//this.transactionMenu.add(this.transferMoney);
+//this.cardTransactionMenu.add(cardTransactionListing);
+//
+//this.setJMenuBar(this.homeMenu);
+//this.setTitle("HomeView");
+
+//public void prepareBaseWindow() {
+//	this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+//	this.setTitle("Account Update Form");
+//	this.setSize(800,400);
+//}
+
+//private String[] columns = {"Id","Transaction Type","Amount","Transaction Date","Description","Status","Currency","Transaction","Account"};
+//private JButton createButton;
+//private JButton updateButton;
+//private JButton deleteButton;
+//private JPanel panel;
+//
+//public AccountTransactionListingPage() {
+//	initializeComponent();
+//}
+//
+//public void initializeComponent() {
+//	panel = new JPanel();
+//	panel.setLayout(new GridLayout(1,3));
+//	
+//	this.createButton = new JButton("Create");
+//	this.updateButton = new JButton("Update");
+//	this.deleteButton = new JButton("Delete");
+//	
+//	panel.add(createButton);
+//	panel.add(updateButton);
+//	panel.add(deleteButton);
+//	
+//	this.add(panel,BorderLayout.SOUTH);
+//	
+//	prepareBaseWindow();
+//}
+//
+//
+//public void prepareBaseWindow() {
+//	this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+//	this.setTitle("Account Transaction Information");
+//	this.setSize(1700,400);
+//}
+
+//private JLabel loanStartDateLabel;
+//private SqlDateModel loanStartModel;
+//private JDatePanelImpl loanStartPanel;
+//private JDatePickerImpl loanStartPicker;
+//loanStartDateLabel = new JLabel("Loan Start Date : ");
+//this.loanStartModel = new SqlDateModel();
+//this.loanStartPanel = new JDatePanelImpl(loanStartModel,new Properties());
+//this.loanStartPicker = new JDatePickerImpl(loanStartPanel,new DateLabelFormatter());
+
+
+
+//----------------
+//Util
+//private String datePattern = "yyyy-MM-dd";
+//private SimpleDateFormat dateFormatter = new SimpleDateFormat(datePattern);
+//
+//@Override
+//public Object stringToValue(String text) throws ParseException {
+//	return dateFormatter.parse(text);
+//}
+//
+//@Override
+//public String valueToString(Object value) throws ParseException {
+//	if(value != null) {
+//		Calendar cal = (Calendar) value;
+//		return dateFormatter.format(cal.getTime());
+//	}
+//	return null;
+//}
+
+//DateUtil
+//public static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//
+//public static Date getSelectedDate(String dateString) {
+//	java.sql.Date sqlDate = null;
+//	try {
+//		java.util.Date utilDate= sdf.parse(dateString);
+//		sqlDate = new java.sql.Date(utilDate.getTime());
+//	}catch(ParseException e) {
+//		e.printStackTrace();
+//	}
+//	return sqlDate;
+//}
+//
+//public class OTPUtil {
+//	
+//	public static String generateOTP(int length) {
+//		Random random = new Random();
+//		StringBuilder otp = new StringBuilder();
+//		for(int i = 0; i < length; i++) {
+//			otp.append(random.nextInt(10));
+//		}
+//		
+//		return otp.toString();
+//	}
+//	
+//}
+//
+//public class PasswordUtil {
+//	
+//	public static String encryptPassword(String password) {
+//		try {
+//		MessageDigest md = MessageDigest.getInstance("SHA-256");
+//		byte[] hash = md.digest(password.getBytes());
+//		return Base64.getEncoder().encodeToString(hash);
+//		
+//		}catch(Exception e) {
+//			throw new RuntimeException();
+//		}
+//		
+//	}
+//	
+//}
+//
+//public class TokenUtil {
+//	
+//	public static String generateToken(String email) {
+//		long timestamp = new Date().getTime();
+//		String tokenData = email +":"+ timestamp;
+//		return Base64.getEncoder().encodeToString(tokenData.getBytes());
+//	}
+//	
+//	public static boolean validateToken(String token) {
+//		return token != null && token.isEmpty();
+//	}
+//	
+//}
+
+//-------------
+//Controller
+//
+//private AccountListingPage view;
+//private AccountDaoImpl accountDao;
+//
+//public AccountListingController() {
+//	super(new AccountListingPage());
+//	this.accountDao = new AccountDaoImpl();
+//	this.authenticate();
+//}
+//
+//@Override
+//public void initController() {
+//	this.view = (AccountListingPage) this.getView();
+//
+//	String[] columns = this.view.getColumns();
+//	this.view.createDataTable(getAccountData(), columns);
+//
+//	this.view.getCreateButton().addActionListener(e -> handleCreateButton());
+//	this.view.getUpdateButton().addActionListener(e -> handleUpdateButton());
+//	this.view.getDeleteButton().addActionListener(e -> handleDeleteButton());
+//
+//}
+//
+//private void handleDeleteButton() {
+//
+//	int selectedRowIndex = getSelectedRow();
+//
+//	if (selectedRowIndex == -1) {
+//		JOptionPane.showMessageDialog(this.view, "Please select a account to delete.");
+//		return;
+//	}
+//
+//	int accountId = getaccountIdFromSelectedRow(selectedRowIndex);
+//
+//	if (confirmDeletion(accountId)) {
+//		deleteaccountAndRefresh(accountId);
+//	}
+//}
+//
+//private void handleUpdateButton() {
+//	new AccountUpdateController(this,this.getaccountIdFromSelectedRow(getSelectedRow()));
+//}
+//
+//private void handleCreateButton() {
+//	new AccountCreateController(this);
+//}
+//
+//public String[][] getAccountData() {
+//	List<Account> Accounts = accountDao.getAll();
+//	String[][] AccountArray = new String[Accounts.size()][this.view.getColumns().length];
+//	int rowCount = 0;
+//	for (Account Account : Accounts) {
+//		AccountArray[rowCount][0] = Account.getId() + "";
+//		AccountArray[rowCount][1] = Account.getaccountNumber();
+//		AccountArray[rowCount][2] = Account.getaccountType()+"";
+//		AccountArray[rowCount][3] = Account.getBalance() + "";
+//		AccountArray[rowCount][4] = Account.getcreatedAt() + "";
+//		AccountArray[rowCount][5] = Account.getBranch().toString();
+//		AccountArray[rowCount][6] = Account.getCustomer().getfirstName();
+//		rowCount++;
+//	}
+//	return AccountArray;
+//}
+//
+//private int getSelectedRow() {
+//	return this.view.getDataTableTemplate().getSelectedRow();
+//}
+//
+//private int getaccountIdFromSelectedRow(int rowIndex) {
+//	return Integer.parseInt(getAccountData()[rowIndex][0]);
+//}
+//
+//private boolean confirmDeletion(int accountId) {
+//	int response = JOptionPane.showConfirmDialog(this.view,
+//			"Are you sure you want to delete account with ID " + accountId + "?", "Confirm Deletion",
+//			JOptionPane.YES_NO_OPTION);
+//	return response == JOptionPane.YES_OPTION;
+//}
+//
+//private void deleteaccountAndRefresh(int accountId) {
+//	accountDao.delete(accountId);
+//	this.refreshTableData();
+//}
+//
+//public void refreshTableData() {
+//	this.view.refreshDataTable(getAccountData());
+//}
+
+//public abstract class BaseController {
+//	
+//	public Employee currentUser;
+//	private JFrame view;
+//	
+//	public abstract void initController();
+//	
+//	public BaseController(JFrame view) {
+//		this.view = view;
+//	}
+//	
+//	public JFrame getView() {
+//		return this.view;
+//	}
+//	
+//	public void authenticate() {
+//		try {
+//			this.currentUser = AuthenticationService.authenticate();
+//			this.initController();
+//			this.view.setVisible(true);
+//			
+//		}catch(InvalidTokenException e){
+//			JOptionPane.showMessageDialog(this.view, e.getMessage());
+//			this.view.dispose();
+//			new LoginController();
+//		}
+//	}
+//	
+//}
+
+//private BranchCreateForm view;
+//private BranchCreateService createService;
+//private BranchListingController parentController;
+//
+//public BranchCreateController(BranchListingController parentController) {
+//	super(new BranchCreateForm());
+//	this.parentController = parentController;
+//	this.authenticate();
+//}
+//
+//@Override
+//public void initController() {
+//	this.view = (BranchCreateForm)this.getView();
+//	this.view.getCreateButton().addActionListener(e -> handleBranchCreateAction());
+//	this.createService = new BranchCreateService();
+//}
+//
+//private void handleBranchCreateAction() {
+//	BranchDTO branchDTO = new BranchDTO();
+//	branchDTO.setName(this.view.getNameField().getText());
+//	branchDTO.setAddress(this.view.getAddressField().getText());
+//	branchDTO.setPhoneNumber(this.view.getPhoneField().getText());
+//	try {
+//		this.createService.call(branchDTO);
+//		this.parentController.refreshTableData();
+//		this.view.showSuccessMessage("Branch created successfully");
+//		this.view.dispose();
+//	}catch(Exception e) {
+//		this.view.showErrorMessage(e.getMessage());
+//	}
+//}
+
+
+//Error
+//public class LoginController extends BaseController {
+//	
+//	private LoginWindow view;
+//	
+//	public LoginController() {
+//		super(new LoginWindow());
+//		this.initController();
+//	}
+//	
+//	public void handleEmployeeLogin() {
+//		this.view.getLoginButton().addActionListener(e -> loginBtnAction());
+//	}
+//
+//	private void loginBtnAction()  {
+//		String email = this.view.getEmailField().getText();
+//		String password = new String(this.view.getPasswordField().getPassword());
+//		try {
+//			AuthenticationService.login(email, password);
+//			homeViewController home = new homeViewController();
+//			this.view.dispose();
+//		}	
+//		catch (IncorrectPasswordException e2) {
+//			JOptionPane.showMessageDialog(this.view, e2.getMessage(), "Error",
+//					JOptionPane.ERROR_MESSAGE);
+//		}
+//		catch (IncorrectEmailException e3) {
+//			JOptionPane.showMessageDialog(this.view, e3.getMessage(), "Error",
+//					JOptionPane.ERROR_MESSAGE);
+//		}
+//		catch(NotConfirmedException e4) {
+//			JOptionPane.showMessageDialog(this.view, e4.getMessage(), "Error",
+//					JOptionPane.ERROR_MESSAGE);
+//		Employee employee = AuthenticationService.employee;
+//			OTPController otpController = new OTPController(EmployeeMapper.toEmployeeDTO(employee));
+//			otpController.sentOTP();
+//		}
+//	}
+//
+//	@Override
+//	public void initController() {
+//		this.view =(LoginWindow) this.getView();
+//		this.view.setVisible(true);
+//		this.view.setTitle("Login Page");
+//		handleEmployeeLogin();
+//	}
+//	
+//}
+
+//public class OTPController extends BaseController {
+//	
+//	private OTPConfirmationForm view;
+//	private OTPService otpService;
+//	private EmployeeDTO employeeDTO;
+//	private EmployeeDao employeeDao;
+//
+//	
+//	public OTPController(EmployeeDTO employee) {
+//		super(new OTPConfirmationForm());
+//		this.employeeDTO = employee;
+//		this.employeeDao = new EmployeeDaoImpl();
+//		initController();
+//	}
+//	
+//	@Override
+//	public void initController() {
+//		this.view = (OTPConfirmationForm) this.getView();
+//		this.view.getConfirmButton().addActionListener(e -> handleOTPConfirmBtn());
+//		this.view.getResentButton().addActionListener(e -> handleOTPResentBtn());
+//		otpService = new OTPService(this.employeeDTO);
+//	}
+//	
+//	
+//	public void sentOTP() {
+//		this.otpService.sentOTPmail();
+//	}
+//
+//	
+//	private void handleOTPConfirmBtn() {
+//		try {
+//		this.otpService.validateOTP(this.view.getOtpField().getText());
+//		Employee employee = this.employeeDao.getEmployeeByEmployeeEmail(this.employeeDTO.getEmail());
+//		this.employeeDao.setConfimedAt(employee);
+//		this.view.getMessageLabel().setText("OTP Confirmed!. Access granted");
+//		this.view.getMessageLabel().setForeground(Color.GREEN);
+//		JOptionPane.showMessageDialog(view, "OTP confirmed ! Access granted");
+//		homeViewController home = new homeViewController();
+//		}
+//		catch(Exception e) {
+//			this.view.getMessageLabel().setText("Invalid OTP. Please Try Again !!");
+//			this.view.getMessageLabel().setForeground(Color.RED);
+//		}
+//	}
+//	
+//	private void handleOTPResentBtn() {
+//		this.otpService.sentOTPmail();
+//
+//	}
+
+
+//public class AuthenticationService {
+//	
+//	public static Employee employee;
+//
+//	public static final EmployeeDaoImpl employeeDao = new EmployeeDaoImpl();
+//	
+//	public static void login(String email,String password) throws IncorrectPasswordException, IncorrectEmailException, NotConfirmedException{
+//		employee = employeeDao.validateEmployee(email,password);
+//		if(!employee.isConfirmed()) {
+//			throw new NotConfirmedException("Account is not confirmed!!");
+//		}
+//	}
+//	 
+//	public static Employee authenticate() throws InvalidTokenException {
+//		if(employee != null) {
+//			employeeDao.validateLoginToken(employee);
+//			return employee;
+//			}
+//		else {
+//			throw new InvalidTokenException("Need to login!!");
+//		}
+//		}
+//	
+//	public static Employee getEmployee() {
+//		return employee;
+//	}
+//}
+//private EmployeeDTO employeeDto;
+//private EmployeeDaoImpl employeeDao;
+//private List<String> errorMessages = new ArrayList<>();
+//private OTPService optService;
+//
+//public EmployeeCreateService() {
+//	this.employeeDao = new EmployeeDaoImpl();
+//}	
+// 
+//public void call(EmployeeDTO employeeDto) throws Exception {
+//	this.errorMessages.clear();
+//	this.employeeDto = employeeDto;
+//	this.validatePassword();
+//	this.checkEmailDuplication();
+//	this.checkPhoneDuplication();
+//	this.checkErrorMessage();
+//	this.creationProcess();
+//	this.optService = new OTPService(employeeDto);
+//	this.optService.sentOTPmail();
+//}
+//
+//private void creationProcess() {
+//	Employee employee = EmployeeMapper.toEmployee(this.employeeDto);
+//	employeeDao.create(employee);
+//}
+//
+//private void checkPhoneDuplication() {
+//	String phone = employeeDto.getPhoneNumber();
+//	if(employeeDao.isPhoneExists(phone)) {
+//		errorMessages.add("Phone number is already in use.");
+//	}
+//}
+//
+//private void checkEmailDuplication() {
+//	String email = employeeDto.getEmail();
+//	if(employeeDao.isEmailExists(email)) {
+//		errorMessages.add("Emailed is already in use.");
+//	}
+//} 
+//
+//private void checkErrorMessage() throws Exception {
+//	if(!errorMessages.isEmpty()) {
+//		throw new Exception(errorMessages.toString().concat("\n")); 
+//	}
+//}
+//
+//private void validatePassword() {
+//	if(!this.employeeDto.getPassword().equals(this.employeeDto.getConfirmPassword())) {
+//		this.errorMessages.add("Incorrect Passowrd!!");
+//	}
+//}
+//
+//public void handleEmployeeRegisteration() {
+//	EmployeeDTO employeeDto = new EmployeeDTO();
+//	employeeDto.setFirstName(this.view.getFirstName());
+//	employeeDto.setLastName(this.view.getLastName());
+//	employeeDto.setEmail(this.view.getEmail());
+//	employeeDto.setPassword(this.view.getPassword());
+//	employeeDto.setConfirmPassword(this.view.getConfirmPassword());
+//	employeeDto.setPhoneNumber(this.view.getPhoneNumber());
+//	employeeDto.setPosition(this.view.getPosition());
+//	employeeDto.setBranch(this.view.getBranchId());
+//	employeeDto.setSalary(this.view.getSalary());
+//	try {
+//		this.createService.call(employeeDto);
+//		this.parentController.refreshTableData();
+//		this.view.showSuccessMessage("Employee Register successfully");
+//		this.view.dispose();
+//		new OTPController(employeeDto);
+//	}
+//	catch(Exception e) {
+//		this.view.showErrorMessage(e.getMessage());
+//	}
+//}
+
+
+
+//-------------------------------------------------------------------------------------------------------------------------------
+
+
+
+//Exception Categories of Exceptions in Java
+//Checked Exceptions
+//These are exceptions that are checked at compile-time. The compiler forces you to handle them using try-catch or throws clause.
+//Examples:IOExceptionSQLExceptionClassNotFoundException
+//How to Handle: You must either handle them in a try-catch block or declare them in the method signature with the throws keyword.
+//Unchecked Exceptions
+//These are exceptions that are checked at runtime. These are not required to be handled by the compiler, but it is good practice to handle them.
+//Examples:NullPointerExceptionArithmeticExceptionArrayIndexOutOfBoundsExceptionIllegalArgumentException
+//How to Handle: These can be handled using a try-catch block, but they do not need to be declared with the throws keyword in the method signature.Errors
+//These are not exceptions but serious problems that a program cannot typically handle. They are usually related to JVM issues, such as OutOfMemoryError or StackOverflowError.
+//Examples:OutOfMemoryErrorStackOverflowError
+//How to Handle: Errors generally should not be handled by the program, as they indicate serious issues that should be fixed at the environment level.
+//try {
+//    String str = null;
+//    int length = str.length();
+//} catch (NullPointerException e) {
+//    System.out.println("NullPointerException caught: " + e.getMessage());
+//}
+//try {
+//    int result = 10 / 0;
+//} catch (ArithmeticException e) {
+//    System.out.println("ArithmeticException caught: " + e.getMessage());
+//}
+//try {
+//    int[] arr = new int[5];
+//    arr[10] = 20;
+//} catch (ArrayIndexOutOfBoundsException e) {
+//    System.out.println("ArrayIndexOutOfBoundsException caught: " + e.getMessage());
+//}
+//try {
+//    Class.forName("com.example.NonExistentClass");
+//} catch (ClassNotFoundException e) {
+//    System.out.println("ClassNotFoundException caught: " + e.getMessage());
+//}
+//try {
+//    FileReader file = new FileReader("nonexistentfile.txt");
+//} catch (IOException e) {
+//    System.out.println("IOException caught: " + e.getMessage());
+//}
+//try {
+//    Thread.sleep(-1000);
+//} catch (IllegalArgumentException | InterruptedException e) {
+//    System.out.println("Exception caught: " + e.getMessage());
+//}
+//try {
+//    // Code that may throw exceptions
+//} catch (Exception e) {
+//    System.out.println("Exception caught: " + e.getMessage());
+//} finally {
+//    System.out.println("This will always be executed.");
+//}
+//public void checkNumber(int number) {
+//    if (number < 0) {
+//        throw new IllegalArgumentException("Number cannot be negative");
+//    }
+//}
+//public void readFile() throws IOException {
+//    FileReader file = new FileReader("file.txt");
+//}
+
+
+
+//------------------------------------------------------------------------------------------------------------------------------------
+
+//interface
+//
+//interface Animal {
+//    void sound();  // Abstract method to make a sound
+//}
+//
+//// Second interface with an abstract method
+//interface Mammal {
+//    void walk();  // Abstract method to walk
+//}
+//
+//// Third interface with a default method
+//interface Aquatic {
+//    // Default method to swim
+//    default void swim() {
+//        System.out.println("This animal swims.");
+//    }
+//}
+//
+//// Dog class implements multiple interfaces: Animal, Mammal, and Aquatic
+//class Dog implements Animal, Mammal, Aquatic {
+//
+//    // Providing implementation for the sound() method from Animal interface
+//    public void sound() {
+//        System.out.println("Dog barks");
+//    }
+//
+//    // Providing implementation for the walk() method from Mammal interface
+//    public void walk() {
+//        System.out.println("Dog walks on land");
+//    }
+//}
+
+
+//------------------------------------------------------------------------------------------------------------------------------------
+
+
+//LinkedList
+//
+//package Node;
+//
+//
+//
+//public class Node {
+//
+//	public int data;
+//	public Node next;
+//
+//	public Node(int data) {
+//		this.data = data;
+//		this.next = null;
+//	}
+//	
+//	public Node() {
+//		
+//	}
+//	
+//	public Node(int data, Node next) {
+//		this.data = data;
+//		this.next = next;
+//	}
+//
+//	public static void printNode(Node node) {
+//
+//		while (node != null) {
+//			System.out.print(node.data + "->");
+//			node = node.next;
+//		}
+//		System.out.print("null");
+//	}
+//
+//	public static void printCircularNode(Node head) {
+//
+//		Node current = head;
+//		Node temp = head;
+//		while (current.next != temp) {
+//			System.out.print(current.data + "->");
+//			current = current.next;
+//		}
+//		System.out.print(head.data);
+//	}
+//	
+//	public static void printLastCircularNode(Node last) {
+//		Node head = last.next;
+//		
+//		while(head.next != last.next) {
+//			System.out.print(head.data+"->");
+//			head = head.next;
+//		}
+//		System.out.print(head.data);
+//	}
+//}
+
+
+//DeleteSpecific
+//public static void delete(Node head,int pos) {
+//	int count = 1;
+//	Node current = head;
+//	
+//	if(pos == 1) {
+//		Node temp = head;
+//		head = head.next;
+//		temp = null;
+//		Node.printNode(head);
+//		return;
+//	}
+//	
+//	if(pos < 1 || head == null) {
+//		System.out.print("Invalid Position");
+//		return;
+//	}
+//	
+//	while(count != pos-1 && current != null) {
+//		count ++;
+//		current = current.next;
+//	}
+//	
+//	if(current == null || current.next == null) {
+//		System.out.print("Position is out of range !!");
+//		return;
+//	}
+//	
+//	current.next = current.next.next;
+//	
+//	Node.printNode(head);
+//}
+
+//DeleteFirst
+//public static void delete(Node head) {
+//	
+//	if(head == null) {
+//		System.out.print("Head is Null");
+//	}
+//	
+//	Node temp = head;
+//	head = head.next;
+//	
+//	Node.printNode(head);
+//}
+
+//DeleteLast
+//
+//public static void delete(Node head) {
+//	
+//	Node current = head;
+//	
+//	if(head == null) {
+//		System.out.print("head is null");
+//		return;
+//	}
+//	
+//	if(head.next == null) {
+//		head = null;
+//		System.out.print("Null");
+//	}
+//	
+//	while(current.next.next != null) {
+//		current = current.next;
+//	}
+//	current.next = null;
+//	
+//	Node.printNode(head);
+//}
+
+
+
+//insertSpecific
+//public static void insert(Node head,int pos, int data) {
+//	
+//	Node current = head;
+//	Node node = new Node(data);
+//	int count = 1;
+//	if(pos < 1) {
+//		System.out.print("Invalid Position!!");
+//		return;
+//	}
+//	
+//	if(pos == 1) {
+//		node.next = head;
+//		head = node;
+//		Node.printNode(node);
+//		return;
+//	}
+//	
+//	while(count != pos - 1 && current != null) {
+//		current = current.next;
+//		count++;
+//	}
+//	
+//	if(current == null) {
+//		System.out.print("Invalid Position");
+//		return;
+//	}
+//	
+//	node.next = current.next;
+//	current.next = node;
+//	
+//	Node.printNode(head);
+//}
+
+
+//insertionBeginning
+//public static void insert(Node head,int data) {
+//	
+//	Node node = new Node(data);
+//	
+//	node.next = head;
+//	
+//	head = node;
+//	
+//	Node.printNode(node);
+//}
+
+//
+//insertionend
+//public static void insert(Node head,int data) {
+//	
+//	Node current = head;
+//	Node node = new Node(data);
+//	
+//	if(current == null) {
+//		Node.printNode(node);
+//		return;
+//	}
+//	
+//	while(current.next != null) {
+//		current = current.next;
+//	}
+//	current.next = node;
+//	
+//	Node.printNode(head);
+//}
+
+
+//Doubly Linked List
+
+//public int data;
+//public Node prev;
+//public Node next;
+//
+//public Node(int data) {
+//	this.data = data;
+//	prev = next = null;
+//}
+//
+//public static void printNode(Node head) {
+//	
+//	if(head == null) {
+//		System.out.print("null");
+//		return;
+//	}
+//	
+//	while(head != null) {
+//		System.out.print(head.data+"->");
+//		head = head.next;
+//	}
+//	
+//	System.out.print("null");
+//}
+//
+//public static void printPrevNode(Node last) {
+//	
+//	if(last == null) {
+//		System.out.print("null");
+//		return;
+//	}
+//	
+//	while(last != null) {
+//		System.out.print(last.data+"->");
+//		last = last.prev;
+//	}
+//	
+//	System.out.print("null");
+//}
+
+
+//delte specific
+//
+//public static void delete(Node head,int pos) {
+//	
+//	if(pos < 1) {
+//		System.out.print("Invalid Position");
+//		return;
+//	}
+//	
+//	Node current = head;
+//	int count = 1;
+//	
+//	while(count < pos) {
+//		count++;
+//		current = current.next;
+//	}
+//	
+//	if(current == null) {
+//		System.out.print("Position is out of range");
+//	}
+//	
+//	if(current.prev != null) {
+//		
+//	current.prev.next = current.next;
+//	
+//	}
+//	
+//	if(current.next != null) {
+//		current.next.prev = current.prev;
+//	}
+//	Node.printNode(head);
+//}
+
+//deleteBegin
+//public static void delete(Node head) {
+//	
+//	if(head == null) {
+//		Node.printNode(head);
+//		return;
+//	}
+//	
+//	
+//	head = head.next;
+//	
+//	if(head != null) {
+//		
+//	head.prev = null;
+//	
+//	}
+//	Node.printNode(head);
+//}
+//
+//delteend
+//public static void delete(Node head) {
+//	
+//	if(head == null) {
+//		Node.printNode(head);
+//		return;
+//	}
+//	
+//	if(head.next == null) {
+//		System.out.print("null");
+//		return;
+//	}
+//	
+//	Node current = head;
+//	
+//	while(current.next != null) {
+//		current = current.next;
+//	}
+//	
+//	if(current.prev != null) {
+//	current.prev.next = null;
+//	}
+//	
+//	Node.printNode(head);
+//}
+
+//insertSpecific
+//public static void insert(Node head, int pos, int new_data) {
+//	int count = 1;
+//	Node newNode = new Node(new_data);
+//	Node current = head;
+//	if(pos == 1) {
+//		newNode.next = head;
+//		head = newNode;
+//	}
+//	while(count < pos-1) {
+//		count++;
+//		current = current.next;
+//	}
+//	if(current == null) {
+//		System.out.print("Invalid Position");
+//		return;
+//	}
+//	
+//	newNode.next = current.next;
+//	current.next = newNode;
+//	newNode.prev = current;
+//	 
+//	
+//	Node.printNode(head);
+//}
+//insertBegin
+//public static void insert(Node head,int data) {
+//	
+//	Node node = new Node(data);
+//	
+//	node.next = head;
+//	
+//	head = node;
+//	
+//	Node.printNode(node);
+//}
+
+
+//OperationOnLinkedList
+//
+//public static Node addTwoNumber(Node first,Node second) {
+//	
+//	Node temp1 = first;
+//	Node temp2 = second;
+//	Node answer = new Node(0);
+//	Node result = answer;
+//	
+//	int carry = 0;
+//	
+//	Node current1 = reverse(temp1);
+//	Node current2 = reverse(temp2);
+//	
+//	while(current1 != null || current2 != null) {
+//		
+//		int val1 = (current1 == null) ? 0 : current1.data;
+//		int val2 = (current2 == null) ? 0 : current2.data;
+//		
+//		int sum = val1 + val2 + carry;
+//		carry = sum / 10;
+//		
+//		answer.next = new Node(sum % 10);
+//		answer = answer.next;
+//		
+//		if(current1 != null) {current1 = current1.next;}
+//		if(current2 != null) {current2 = current2.next;}
+//		
+//	}
+//	
+//	if(carry > 0) {
+//		answer.next = new Node(carry);
+//	}
+//	
+//	return reverse(result.next);
+//}
+//
+//public static Node reverse(Node head) {
+//	Node prev = null;
+//	Node current = head;
+//	
+//	while(current != null) {
+//		Node temp = current.next;
+//		current.next = prev;
+//		prev = current;
+//		current = temp;
+//	}
+//	
+//	return prev;
+//}
+//
+//public static Node removeNthNodeFromEndOfList(Node head, int n) {
+//	
+//	if(n < 1 || head == null) {
+//		System.out.print("Position out of range");
+//		return null;
+//	}
+//	
+//	Node current = head;
+//	int count = 0;
+//	
+//	while(current != null) {
+//		count++;
+//		current = current.next;
+//	}
+//	
+//		current = head;
+//		
+//	if(count-n == 0) {
+//		current = current.next;
+//		head = current;
+//		return head;
+//		}
+//		
+//	for(int i = 1; i < count-n; i++) {
+//		current = current.next;
+//	}
+//	
+//	current.next = current.next.next;
+//	
+//	return head;
+//}
+//
+//public static Node reorderList(Node head) {
+//	
+//	if (head == null || head.next == null) return null;
+//	
+//	Node slow = head;
+//	Node fast = head;
+//	
+//	while(fast != null && fast.next != null) {
+//		slow = slow.next;
+//		fast = fast.next.next;
+//	}
+//	
+//	Node current = slow.next; //current take the second half
+//	slow.next = null; // split the first half
+//	Node result = null;
+//	
+//	while(current != null) {
+//		Node temp = current.next;
+//		current.next = result;
+//		result = current;
+//		current = temp;
+//	}
+//	
+//	Node first = head;
+//	Node second = result;
+//	
+//	while(second != null) {
+//		Node temp1 = first.next;
+//		Node temp2 = second.next;
+//		
+//		first.next = second;
+//		second.next = temp1;
+//		
+//		first = temp1;
+//		second = temp2;
+//	}
+//	
+//	
+//	return head;
+//}
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+//Sorting
+//
+//Bubble
+//public static int[] recursiveSort(int[] arr,int n) {
+//	
+//	if(n == arr.length - 1) {
+//		return arr;
+//	}
+//	
+//	for(int i = 0; i < arr.length-1-n; i++) {
+//		if(arr[i] > arr[i+1]) {
+//			int temp = arr[i];
+//			arr[i] = arr[i+1];
+//			arr[i+1] = temp;
+//		}
+//	}
+//	n++;
+//	
+//	return recursiveSort(arr,n);
+//}
+//
+//heap
+//public static int[] sort(int[] arr) {
+//	int m = 0;
+//	int length = arr.length-1;
+//	
+//	while(m != arr.length-1) {
+//		
+//	int n = (length) / 2;
+//	
+//	for(int i = length; i >= 1; i--) {
+//		if(arr[n] < arr[i]) {
+//			int temp = arr[i];
+//			arr[i] = arr[n];
+//			arr[n] = temp;
+//		}
+//		if(i/2 != 0 && n != 0) {
+//			n--;
+//		}
+//	}
+//	
+//	int temp = arr[n];
+//	arr[n] = arr[length];
+//	arr[length] = temp;
+//	
+//	length--;
+//	m++;
+//	}
+//	return arr;
+//}
+//
+//
+//
+//Insertion
+//public static int[] normalSort(int[] arr) {
+//	
+//	for(int i = 1; i < arr.length; i++) {
+//		int key = arr[i];
+//		
+//		int j = i - 1;
+//		
+//		while(j >= 0 && key < arr[j]) {
+//			arr[j + 1] = arr[j];
+//			j--;
+//		}
+//		arr[j+1] = key;
+//	}
+//	return arr;
+//}
+//
+//
+//public static int[] recursiveSort(int[] arr, int n) {
+//	
+//	if(n == arr.length) {
+//		return arr;
+//	}
+//	
+//	int key = arr[n];
+//	int j = n - 1;
+//	
+//	while(j >= 0 && key < arr[j]) {
+//		arr[j+1] = arr[j];
+//		j--;
+//	}
+//	arr[j+1] = key;
+//	
+//	return recursiveSort(arr,n+1);
+//}
+//
+//
+//Merge
+//public static int[] merge(int[] array) {
+//	
+//	//Base Case
+//	if(array.length == 1) {
+//		return array;
+//	}
+//	
+//	// find mid
+//	int mid = array.length / 2;
+//	int[] array1 = new int[mid];
+//	int[] array2 = new int[array.length-mid];
+//	
+//	
+//	// split array1 and array2 
+//	for(int i = 0; i < mid;i++) {
+//		array1[i] = array[i];
+//	}
+//	int count = 0;
+//	for(int j = mid; j < array.length; j++) {
+//		array2[count] = array[j];
+//		count++;
+//	}
+//	
+//	
+//	//recursive call 
+//	return sort(merge(array1),merge(array2));
+//}
+//
+//public static int[] sort(int[] array1,int[] array2) {
+//	
+//	int[] result = new int[array1.length+array2.length];
+//	int temp1 = 0;
+//	int temp2 = 0;
+//	
+//	while(temp1+temp2 < array1.length + array2.length) {
+//		
+//		if(temp1 == array1.length) {
+//			result[temp1+temp2] = array2[temp2++];
+//			
+//		}else if(temp2 == array2.length) {
+//			result[temp1+temp2] = array1[temp1++];
+//		}else {
+//			if(array1[temp1] <= array2[temp2]) {
+//				result[temp1+temp2] = array1[temp1++];
+//			}else {
+//				result[temp1+temp2] = array2[temp2++];
+//			}
+//		}
+//	}
+//	
+//	return result;
+//}
+//
+//quiclk
+//public static int[] sort(int[] arr,int pivot,int secondpointer) {
+//	
+//	int m = secondpointer;
+//	int count = 0;
+//	
+//	if(secondpointer >= pivot) {
+//		return arr;
+//	}
+//	
+//	for(int i = m; i < arr.length; i++) {
+//		
+//		if(arr[pivot] > arr[i]) {
+//			
+//			if(count != 0) {
+//				m++;
+//			}
+//			count++;
+//			
+//			if(arr[m] > arr[i]) {
+//				int temp = arr[m];
+//				arr[m] = arr[i];
+//				arr[i] = temp;
+//			}
+//		}
+//	}
+//	
+//	m++;
+//	int temp = arr[pivot];
+//	arr[pivot] = arr[m];
+//	arr[m] =temp;
+//	
+//	
+//	arr = sort(arr,m-1,secondpointer);
+//	arr = sort(arr,pivot,m+1);
+//	
+//	return arr;
+//}
+//
+//selection
+//public static int[] sort(int[] arr,int n) {
+//	if(n == arr.length -1) {
+//		return arr;
+//	}
+//	int index = n;
+//	for(int j = n+1; j < arr.length; j++) {
+//		if(arr[index] > arr[j]) {
+//			index = j;
+//		}
+//	}
+//	
+//	if(n != index) {
+//		int temp = arr[n];
+//		arr[n] = arr[index];
+//		arr[index] = temp;
+//		}
+//	
+//	return sort(arr,n+1);
+//}
